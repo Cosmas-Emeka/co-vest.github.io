@@ -10,30 +10,76 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
-<body>
-    <nav>
-        <a href="" class="logo">
-            <img src="./img/dohbag.png" alt="">
-            <h2>co$vest</h2>
-        </a>
-        <ul id="navLinks">
-            <li onmouseover="navPopup()" onmouseleave="popupLeave()"><a href="">Personal</a></li>
-            <li><a href="">Invest <i class="fa fa-caret-down"></i></a></li>
-            <li><a href="">Piggy-Bank</a></li>
-            <li><a href="">Business <i class="fa fa-caret-down"></i></a></li>
-            <li><a href="">Developer</a></li>
-            <li><a class="btn" href="">Get Started</a></li>
-            <li><a class="btn" href="">Sign in</a></li>
-        </ul>
-        <i class="fa fa-bars fa-2x" id="menuIcon" onclick="showMenu()"></i>
-        <i class="fa fa-times fa-2x" id="timesIcon" onclick="hideMenu()"></i>
-    </nav>
-    <div id="test">
-        <h2>lorem</h2>
-        <h2>lorem</h2>
-        <h2>lorem</h2>
-        <h2>lorem</h2>
+<body id="body">
+
+
+    <!-- -------------- Nav section ------------ -->
+
+    <!-- ---------------- Header --------------------- -->
+        <nav>
+            <a href="index.html" class="logo-link">
+                <img class="logo" src="./img/dohbag.png" alt="">
+                <h2 class="name">co$vest</h2>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <div>
+                    <a href="index.html" class="logo-link">
+                        <img class="logo second" src="./img/dohbag.png" alt="">
+                        <h3 class="name second">co$vest</h3>
+                    </a>
+                    <i class="fa fa-times fa-2x" onclick="hideMenu()"></i> 
+                </div>
+                <ul>
+                    <li><a href="">Personal</a></li>
+                    <li><a href="">Invest <i class="fa fa-caret-down"></i></a></li>
+                    <li><a href="">Piggy-Bank</a></li>
+                    <li><a href="">Business <i class="fa fa-caret-down"></i></a></li>
+                    <li><a href="">Developer</a></li>
+                    <li><a class="btn" href="">Get Started</a></li>
+                    <li><a class="btn" href="">Sign in</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars fa-2x" id="menuIcon" onclick="showMenu()"></i>
+        </nav>
+    
+    <!-- ---------- Intro section -------------- -->
+    <div class="container">
+        <section class="intro">
+            <div class="intro-text">
+                <h2>Empowering Your Financial Future.</h2>
+                <h4>
+                    <span>co$vest</span> are a leading fintech company 
+                    dedicated to revolutionizing the way you 
+                    manage and grow your finances.
+                </h4>
+                <p>
+                    At <span>co$vest</span>, we understand that traditional 
+                    financial services can be cumbersome and time-consuming.
+                    That's why we leverage the latest advancements in 
+                    technology to streamline and simplify your financial 
+                    journey. Our mission is to provide you with seamless 
+                    digital experiences that enhance your financial 
+                    well-being, enabling you to focus on what matters 
+                    most to you.
+                </p>
+                <div>
+                    <a href="">
+                        <img src="./img/store.png" alt="">
+                    </a>
+                    <a href="./index.html">
+                        <img src="./img/google.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="intro-img">
+                <img src="./img/opay.png" alt="">
+            </div>
+        </section>
     </div>
+ 
+
+
+
 
     <!-- --------------- Javascript ---------------- -->
     <script src="./app.js"></script>
