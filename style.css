@@ -30,14 +30,13 @@ nav {
     border-bottom: 1px solid var(--pry-color);
     background: #fff;
     z-index: 2;
-    padding-left: 1rem;
-    padding-right: 2rem;
 }
 
 .logo-link {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 1rem;
 }
 
 
@@ -130,7 +129,7 @@ nav {
         border-bottom: 1px solid var(--pry-color);
         padding-left: 1rem;
         padding-right: 2rem;
-        height: 8vh;
+        height: 4rem;
     }
     .nav-links ul {
         display: flex;
@@ -197,7 +196,6 @@ nav {
 
 
 .intro-text, .intro-img {
-    flex-basis: 50%;
     margin-bottom: 3rem;
 }
 
@@ -246,6 +244,10 @@ nav {
     }
     .intro-text h2, .intro-text h4, .intro-text p {
         text-align: center;
+    }
+    .intro-img {
+        display: block;
+        margin: auto;
     }
 }
 
