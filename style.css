@@ -211,6 +211,12 @@ nav {
 }
 
 
+.intro-img img {
+    width: 400px;
+    height: 400px;
+}
+
+
 .intro-text div {
     margin-top: 2.4rem;
     gap: 0.5rem;
@@ -258,8 +264,9 @@ nav {
         text-align: center;
     }
     .intro-img {
-        display: block;
-        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
