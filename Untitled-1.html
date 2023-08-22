@@ -1,0 +1,360 @@
+<nav>
+    <a href="index.html" class="logo-link">
+        <img class="logo" src="./img/dohbag.png" alt="">
+        <h2 class="name">co$vest</h2>
+    </a>
+    <div class="nav-links" id="navLinks">
+        <div>
+            <a href="index.html" class="logo-link">
+                <img class="logo second" src="./img/dohbag.png" alt="">
+                <h3 class="name second">co$vest</h3>
+            </a>
+            <i class="fa fa-times fa-2x" onclick="hideMenu()"></i> 
+        </div>
+        <ul>
+            <li><a href="">Personal</a></li>
+            <li><a href="">Invest <i class="fa fa-caret-down"></i></a></li>
+            <li><a href="">Piggy-Bank</a></li>
+            <li><a href="">Business <i class="fa fa-caret-down"></i></a></li>
+            <li><a href="">Developer</a></li>
+            <li><a class="btn" href="">Get Started</a></li>
+            <li><a class="btn" href="">Sign in</a></li>
+        </ul>
+    </div>
+    <i class="fa fa-bars fa-2x" id="menuIcon" onclick="showMenu()"></i>
+</nav>
+
+<!-- ---------- Intro section -------------- -->
+<section class="intro">
+    <div class="intro-text">
+        <h2>Empowering Your Financial Future.</h2>
+        <p>
+            At <span>co$vest</span>, we understand that traditional 
+            financial services can be cumbersome and time-consuming.
+            That's why we leverage the latest advancements in 
+            technology to streamline and simplify your financial 
+            journey. Our mission is to provide you with seamless 
+            digital experiences that enhance your financial 
+            well-being, enabling you to focus on what matters 
+            most to you.
+        </p>
+        <div>
+            <a href="">
+                <img src="./img/android.png" alt="">
+            </a>
+            <a href="">
+                <img src="./img/ios.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="intro-img">
+        <img src="./img/download.png" alt="">
+    </div>
+</section>
+
+
+<!-- ---------- Features section -------------- -->
+<section class="features">
+    <div class="feature-col">
+        <h2>Secure Transactions</h2>
+        <div>
+        <p>
+            Your security is our top 
+            priority. Benefit from advanced encryption and 
+            multi-factor authentication to safeguard your 
+            financial transactions and protect your 
+            sensitive information from unauthorized access.
+        </p>
+        <img src="./img/sec.png" alt="">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+nav {
+    width: 100%;
+    max-width: 100%;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--sec-color);
+    z-index: 2;
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+.logo-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+
+.name {
+    color: var(--pry-color);
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+
+.second {
+    display: none;
+}
+
+
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.8rem;
+    list-style: none;
+}
+
+
+.nav-links ul li a {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 5px 8px;
+    border: 1px solid var(--sec-color);
+    border-radius: 10px;
+}
+
+
+.nav-links ul li a:hover {
+    border: 1px solid var(--pry-color);
+    color: var(--pry-color);
+    transition: 1s;
+}
+
+
+.nav-links ul li .btn {
+    background: var(--pry-grad-color);
+    color: #fff;
+}
+
+
+.nav-links ul li .btn:hover {
+    transition: 1s;
+    color: #fff;
+}
+
+
+@media (max-width: 1000px) {
+    .nav-links ul li .btn {
+        display: none;
+        margin-left: 0;
+    }
+    .nav-links ul li:nth-child(5) {
+        margin-right: -2rem;
+    }
+}
+
+
+#menuIcon, .nav-links div i {
+    display: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+    #menuIcon, .nav-links div i {
+        display: block;
+        color: var(--pry-color);
+    }
+    .second {
+        display: block;
+    }
+    .nav-links {
+        position: fixed;
+        background: var(--sec-color);
+        height: 100vh;
+        width: 100%;
+        max-width: 100%;
+        top: 0rem;
+        left: -100%;
+        z-index: 2;
+    }
+    .nav-links div {
+        position: fixed;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 2rem;
+        height: 3.5rem;
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        overflow: scroll;
+        gap: 3rem;
+        position: relative;
+        top: 4rem;
+    }
+    .nav-links ul li {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2.7rem;
+    }
+    .nav-links ul li a {
+        width: fit-content;
+        padding: 5px 8px;
+        border: none;
+    }
+    .nav-links ul li a:hover {
+        transition: 0.5s;
+        border: none;
+    }
+    .nav-links ul li .btn {
+        display: block;
+        border: 1px solid var(--sec-color);
+    }
+    .nav-links ul li .btn:hover {
+        transition: 1s;
+        border: 1px solid #fff;
+    }
+    .nav-links ul li:nth-child(5) {
+        margin-right: 0;
+    }
+}
+
+
+.container {
+    position: relative;
+    top: 4rem;
+    z-index: -1;
+}
+
+
+/* ---------------------- Intro section ---------------------- */
+.intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 800px;
+    margin-top: -1rem;
+    padding: 4rem 5%;
+    background: var(--sec-color);
+    color: var(--text-color);
+    overflow: scroll;
+    text-align: center;
+}
+
+
+@media (max-width: 1000px) {
+    .intro {
+        height: fit-content;
+    }
+}
+
+
+.intro-text, .intro-img {
+    flex-basis: 50%;
+    margin-bottom: 2.5rem;
+}
+
+
+.intro-img img {
+    width: 600px;
+    height: 600px;
+}
+
+
+@media (max-width: 481px) {
+    .intro-img img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+
+.intro-text div {
+    margin-top: 2.4rem;
+}
+
+
+.intro-text div a {
+    cursor: pointer;
+}
+
+
+.intro-text div a img {
+    width: 130px;
+    height: 40px;
+}
+
+
+.intro h2, .features h2 {
+    font-size: 3.4rem;
+    font-weight: 1300;
+}
+
+
+.intro p {
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+
+@media (max-width: 1000px) {
+    .intro {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .intro-text h2, .intro-text h4 {
+        text-align: center;
+    }
+    .intro-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+/* -------------- Features section ---------------- */
+.features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.feature-col {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 0.6rem;
+   width: 70%;
+}
+
+
+.feature-col img {
+    width: 70px;
+    height: 70px;
+}
